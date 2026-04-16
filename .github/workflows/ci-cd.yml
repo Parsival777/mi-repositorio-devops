@@ -10,13 +10,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      #Clonar el código del repositorio
+      
       - name: Descargar el código fuente
         uses: actions/checkout@v3
 
-      #Validar la construcción del contenedor Docker
+      
       - name: Construir aplicación con Docker Compose
         run: |
           echo "Iniciando la validación del código y construcción de la imagen..."
-          docker-compose build
+          docker compose build
           echo "¡Construcción exitosa! El código está listo para despliegue."
