@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Instalando dependencias"
+      - pip install -r requirements.txt
+  build:
+    commands:
+      - echo "Construyendo la aplicación"
+      - docker build -t mi-app .
+  post_build:
+    commands:
+      - echo "Build completado correctamente"
+artifacts:
+  files:
+    - '**/*'
